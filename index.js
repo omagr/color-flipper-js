@@ -1,3 +1,7 @@
+if (screen.width < 450) {
+  alert("please switch on desktop-site for better experience!");
+}
+
 const hexArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
 const changeColorButton = document.getElementById("btn-color");
 const changeColorText = document.getElementById("color");
