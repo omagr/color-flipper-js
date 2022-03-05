@@ -1,5 +1,4 @@
 const hexArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
-
 const changeColorText = document.getElementById("color");
 const changeColorBody = document.querySelector("body");
 const changeColorButtonGradient = document.getElementById("btn-color-gradient");
