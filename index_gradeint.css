@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@600&family=Shippori+Antique+B1&display=swap");
+
 body {
   margin: 0;
   padding: 0;
@@ -9,11 +10,13 @@ body {
   user-select: none;
   background-color: #d1d1d1;
 }
+
 nav {
-  width: inherit;
-  height: 10vh;
-  background-color: #d1d1d1;
+  width: initial;
+  height: 8vh;
+  background-color: #000000;
 }
+
 .nav-center {
   letter-spacing: 1px;
   background-color: #d1d1d1;
@@ -21,24 +24,30 @@ nav {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  height: inherit;
   border-bottom: 1px solid black;
 }
-.nav-center h1 a {
-  color: rgb(31, 31, 31);
-  text-decoration: none;
-}
+
 .nav-list {
   display: flex;
   flex-direction: row;
   list-style: none;
 }
+
+.nav-center h1 a {
+  color: rgb(31, 31, 31);
+  text-decoration: none;
+}
+
 .nav-list li {
   margin: 10px;
 }
+
 .nav-list li a {
   color: rgb(31, 31, 31);
   text-decoration: none;
 }
+
 .nav-list li img {
   display: grid;
   place-content: center;
@@ -46,19 +55,29 @@ nav {
   cursor: pointer;
   opacity: 50%;
 }
+
 main {
-  width: initial;
-  height: 90vh;
+  height: 92vh;
 }
+
 .center {
   width: 100%;
-  height: 90vh;
+  height: 92vh;
   display: flex;
 }
+
+#text1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .btn {
   position: fixed;
-  top: 80%;
-  left: 45%;
+  left: 50%;
+  bottom: 8%;
+  transform: translate(-50%, -92%);
   background-color: #d1d1d1;
   font-weight: 400;
   border-radius: 20px;
@@ -67,18 +86,22 @@ main {
   color: rgb(31, 31, 31);
   padding: 15px;
   letter-spacing: 4px;
+  z-index: 100;
 }
+
 .btn:active {
   color: #d1d1d1;
   background-color: rgb(31, 31, 31);
   box-shadow: 10px 10px 21px #b2b2b27e, -10px -10px 21px #f0f0f070;
 }
+
 .center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 h2 {
   margin: 20px;
   letter-spacing: 2px;
@@ -90,67 +113,84 @@ h2 {
   padding: 20px;
   height: fit-content;
 }
+
 .center h2 span {
   user-select: all;
 }
+
+#backup {
+  width: inherit;
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+
 @media only screen and (max-width: 800px) {
-  .btn {
-    position: fixed;
-    top: 80%;
-    left: 40%;
-    background-color: #d1d1d1;
-    font-weight: 400;
-    border-radius: 20px;
-    border: 2px solid rgb(31, 31, 31);
-    font-size: 15px;
-    color: rgb(31, 31, 31);
-    padding: 15px 30px;
-    letter-spacing: 4px;
+  #gradientColor {
+    display: none;
   }
-  .nav-center {
-    padding: 10px 20px;
-  }
-  h2 {
-    margin: 15px;
-    letter-spacing: 2px;
-    font-weight: 900;
-    border-radius: 12px;
-    background-color: rgb(31, 31, 31);
-    font-size: 15px;
-    color: #d1d1d1;
-    padding: 15px;
-    height: fit-content;
+
+  #backup {
+    width: inherit;
+    background-color: transparent;
+    border: none;
+    display: inline;
   }
 }
+
+
+#clipborad {
+  display: grid;
+  place-content: center;
+  width: 30px;
+  cursor: pointer;
+  opacity: 50%;
+}
+
+#clipborad:active {
+  opacity: 100%;
+}
+
 @media only screen and (max-width: 600px) {
-  .nav-center {
-    padding: 10px 20px;
-  }
   h2 {
-    margin: 10px;
+    margin: 20px;
     letter-spacing: 2px;
     font-weight: 900;
-    border-radius: 12px;
+    border-radius: 20px;
     background-color: rgb(31, 31, 31);
     font-size: 10px;
     color: #d1d1d1;
-    padding: 10px;
-    height: fit-content;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
-}
-@media only screen and (max-width: 400px) {
+
   .nav-center {
-    padding: 10px 20px;
+    padding: 10 30px;
+    font-size: 10px;
   }
-  h2 {
-    margin: 7px;
-    letter-spacing: 1px;
-    font-weight: 400;
-    border-radius: 7px;
-    background-color: rgb(31, 31, 31);
-    font-size: 8px;
-    color: #d1d1d1;
-    padding: 5px;
-    height: fit-content;
+
+  #backup {
+    width: inherit;
+    background-color: transparent;
+    border: none;
+    display: inline;
+  }
+
+  #clipborad {
+    display: grid;
+    place-content: center;
+    width: 15px;
+    cursor: pointer;
+    opacity: 50%;
+  }
+  .nav-list li img {
+    display: grid;
+    place-content: center;
+    width: 15px;
+    cursor: pointer;
+    opacity: 50%;
   }
 }
