@@ -4,6 +4,7 @@ const changeColorBody = document.querySelector("body");
 const changeColorButtonGradient = document.getElementById("btn-color-gradient");
 const hideMainText = document.getElementById("hideText");
 let hold = false;
+let backup;
 
 changeColorButtonGradient.addEventListener("click", function gradientChange() {
   let colorOne = "#";
@@ -22,6 +23,7 @@ changeColorButtonGradient.addEventListener("click", function gradientChange() {
   ).textContent = `linear-gradient(100deg,${colorOne},${colorTwo})`;
   document.getElementById("colorOne").textContent = colorOne;
   document.getElementById("colorTwo").textContent = colorTwo;
+  backup = `linear-gradient(100deg,${colorOne},${colorTwo})`;
 });
 
 function randomNmber() {
@@ -40,4 +42,7 @@ hideMainText.addEventListener("mousedown", function hideText() {
     document.getElementById("hideText").style.opacity = "50%";
     hold = false;
   }
+});
+document.getElementById("backup").addEventListener("click", function () {
+  navigator.clipboard.writeText(backup);
 });
